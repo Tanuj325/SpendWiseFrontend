@@ -190,7 +190,3 @@ This app is paired with a **Spring Boot backend**. Make sure the backend server 
 This project is for academic and educational purposes.
 
 ---
-
-<div align="center">
-  Made with ❤️ using React Native
-</div>
