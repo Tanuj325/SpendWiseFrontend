@@ -48,11 +48,16 @@ export default function SplashScreen() {
 
       const token = await AsyncStorage.getItem('token');
 
+      const savedUser = await AsyncStorage.getItem('userData');
+
       setTimeout(() => {
 
-        if (token) {
+        if (token && savedUser) {
 
-          navigation.replace('Dashboard');
+          const user = JSON.parse(savedUser);
+
+          // ✅ FIX: Pass userId so Dashboard and AddExpense always have it
+          navigation.replace('Dashboard', { userId: user.id });
 
         } else {
 

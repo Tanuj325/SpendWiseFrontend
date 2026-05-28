@@ -14,40 +14,47 @@ import {
 
 import DatePicker from 'react-native-date-picker';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function AddExpense() {
 
   const navigation = useNavigation();
   const route = useRoute();
 
-  // ✅ USER ID FROM NAVIGATION PARAMS
-  const { userId } = route.params;
-
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
 
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState("");
+  const [category, setCategory] = useState('');
+  const [description, setDescription] = useState('');
+  const [amount, setAmount] = useState('');
 
   const addExpense = async () => {
 
     try {
 
       if (!amount || !category) {
-        Alert.alert("Error", "Please fill required fields");
+        Alert.alert('Error', 'Please fill required fields');
         return;
       }
+      
+      const savedUser = await AsyncStorage.getItem('userData');
+
+      if (!savedUser) {
+        Alert.alert('Error', 'Session expired. Please login again.');
+        navigation.replace('Login');
+        return;
+      }
+
+      const user = JSON.parse(savedUser);
+      const userId = user.id;
 
       const response = await fetch(
         `https://spendwisebackend-yvnj.onrender.com/expenses/${userId}`,
         {
-          method: "POST",
-
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
-
           body: JSON.stringify({
             description: description,
             amount: Number(amount),
@@ -58,29 +65,24 @@ export default function AddExpense() {
       );
 
       if (!response.ok) {
-        Alert.alert("Error", "Failed to add expense");
+        Alert.alert('Error', 'Failed to add expense');
         return;
       }
 
-      Alert.alert(
-        "Success",
-        "Expense added successfully!"
-      );
+      Alert.alert('Success', 'Expense added successfully!');
 
-      setAmount("");
-      setCategory("");
-      setDescription("");
+      setAmount('');
+      setCategory('');
+      setDescription('');
 
-      navigation.replace("Dashboard");
+      // ✅ FIX: Pass userId when navigating back so Dashboard doesn't lose it
+      navigation.replace('Dashboard', { userId });
 
     } catch (error) {
 
       console.log(error);
 
-      Alert.alert(
-        "Error",
-        "Failed to add expense. Please try again."
-      );
+      Alert.alert('Error', 'Failed to add expense. Please try again.');
     }
   };
 
@@ -122,73 +124,32 @@ export default function AddExpense() {
         <View style={styles.categoryWrapper}>
 
           {[
-            {
-              category: "Food",
-              icon: require("../../assets/food.png")
-            },
-            {
-              category: "Transport",
-              icon: require("../../assets/transport.png")
-            },
-            {
-              category: "Shopping",
-              icon: require("../../assets/shopping.png")
-            },
-            {
-              category: "Bills",
-              icon: require("../../assets/bills.png")
-            },
-            {
-              category: "Entertainment",
-              icon: require("../../assets/entertainment.png")
-            },
-            {
-              category: "Health",
-              icon: require("../../assets/health.png")
-            },
-            {
-              category: "Education",
-              icon: require("../../assets/education.png")
-            },
-            {
-              category: "Other",
-              icon: require("../../assets/other.png")
-            },
-
+            { category: 'Food', icon: require('../../assets/food.png') },
+            { category: 'Transport', icon: require('../../assets/transport.png') },
+            { category: 'Shopping', icon: require('../../assets/shopping.png') },
+            { category: 'Bills', icon: require('../../assets/bills.png') },
+            { category: 'Entertainment', icon: require('../../assets/entertainment.png') },
+            { category: 'Health', icon: require('../../assets/health.png') },
+            { category: 'Education', icon: require('../../assets/education.png') },
+            { category: 'Other', icon: require('../../assets/other.png') },
           ].map((item, index) => (
 
             <TouchableOpacity
-
               key={index}
-
               style={{
                 ...styles.categoryBox,
                 borderWidth: category === item.category ? 2 : 0,
-                borderColor:
-                  category === item.category
-                    ? "green"
-                    : null,
-
-                backgroundColor:
-                  category === item.category
-                    ? "green"
-                    : null
+                borderColor: category === item.category ? 'green' : null,
+                backgroundColor: category === item.category ? 'green' : null,
               }}
-
               onPress={() => setCategory(item.category)}
             >
 
               <View style={styles.iconCircle}>
-                <Image
-                  source={item.icon}
-                  style={styles.icon}
-                />
+                <Image source={item.icon} style={styles.icon} />
               </View>
 
-              <Text
-                numberOfLines={1}
-                style={styles.categoryText}
-              >
+              <Text numberOfLines={1} style={styles.categoryText}>
                 {item.category}
               </Text>
 
@@ -220,9 +181,7 @@ export default function AddExpense() {
           style={styles.input}
           onPress={() => setOpen(true)}
         >
-          <Text>
-            {date.toLocaleDateString()}
-          </Text>
+          <Text>{date.toLocaleDateString()}</Text>
         </TouchableOpacity>
 
         <DatePicker
@@ -230,27 +189,16 @@ export default function AddExpense() {
           open={open}
           date={date}
           mode="date"
-
           onConfirm={(selectedDate) => {
             setOpen(false);
             setDate(selectedDate);
           }}
-
-          onCancel={() => {
-            setOpen(false);
-          }}
+          onCancel={() => setOpen(false)}
         />
 
         {/* Save Button */}
-        <TouchableOpacity
-          style={styles.button}
-          onPress={addExpense}
-        >
-
-          <Text style={styles.buttonText}>
-            Add Expense
-          </Text>
-
+        <TouchableOpacity style={styles.button} onPress={addExpense}>
+          <Text style={styles.buttonText}>Add Expense</Text>
         </TouchableOpacity>
 
       </ScrollView>
