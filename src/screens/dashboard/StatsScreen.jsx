@@ -212,9 +212,6 @@ export default function StatsScreen() {
                 donut
                 radius={100}
                 innerRadius={60}
-                showText
-                textColor="white"
-                textSize={12}
                 focusOnPress
                 backgroundColor="#1E293B"
 

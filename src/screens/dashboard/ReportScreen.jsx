@@ -225,9 +225,6 @@ export default function ReportScreen() {
                 donut
                 radius={110}
                 innerRadius={70}
-                showText
-                textColor="white"
-                textSize={12}
                 backgroundColor="#1E293B"
                 centerLabelComponent={() => (
                   <View style={styles.center}>
