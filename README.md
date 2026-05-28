@@ -188,5 +188,3 @@ This app is paired with a **Spring Boot backend**. Make sure the backend server 
 ## 📄 License
 
 This project is for academic and educational purposes.
-
----
