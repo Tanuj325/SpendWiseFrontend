@@ -72,6 +72,7 @@ This is the **frontend** repository. It connects to a Spring Boot backend for da
 
 ## 📁 Project Structure
 
+```
 SpendWiseFrontend/
 ├── android/              # Android native project
 ├── ios/                  # iOS native project
@@ -80,12 +81,13 @@ SpendWiseFrontend/
 │   ├── screens/          # All app screens
 │   ├── components/       # Reusable UI components
 │   └── ...
-├── tests/            # Jest test files
+├── __tests__/            # Jest test files
 ├── App.jsx               # Root component
 ├── index.js              # Entry point
 ├── package.json
 ├── tsconfig.json
 └── babel.config.js
+```
 
 ---
 
@@ -98,6 +100,7 @@ SpendWiseFrontend/
 - **Android Studio** (for Android) or **Xcode** (for iOS, macOS only)
 
 ### Installation
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Tanuj325/SpendWiseFrontend.git
@@ -109,8 +112,10 @@ npm install
 # 3. (iOS only) Install CocoaPods
 bundle install
 bundle exec pod install
+```
 
 ### Running the App
+
 ```bash
 # Step 1 — Start Metro bundler
 npm start
@@ -118,10 +123,15 @@ npm start
 # Step 2 — Run on Android
 npm run android
 
-# Step 2 — Run on iOS
+# Step 3 — Run on iOS
 npm run ios
+```
 
-### Linting & Formatting
+> If the simulator doesn't launch automatically, open Android Studio / Xcode and start an emulator manually.
+
+---
+
+## 🔍 Linting & Formatting
 
 ```bash
 # Lint
@@ -129,12 +139,21 @@ npm run lint
 
 # Format (Prettier)
 npx prettier --write "src/**/*.{js,jsx,ts,tsx}"
+```
 
-### 🔗 Backend
-This app is paired with a Spring Boot backend. Make sure the backend server is running and update the base URL in the API config before running the app.
-Backend repo: https://github.com/Tanuj325/SpendWiseBackend
+---
 
-### 📦 Key Dependencies
+## 🔗 Backend
+
+This app is paired with a **Spring Boot backend**. Make sure the backend server is running and update the base URL in the API config before running the app.
+
+> Backend repo: [SpendWiseBackend](https://github.com/Tanuj325/SpendWiseBackend)
+
+---
+
+## 📦 Key Dependencies
+
+```json
 {
   "@react-navigation/bottom-tabs": "^7.10.1",
   "@react-navigation/drawer": "^7.7.13",
@@ -146,16 +165,32 @@ Backend repo: https://github.com/Tanuj325/SpendWiseBackend
   "@react-native-async-storage/async-storage": "^2.2.0",
   "dayjs": "^1.11.19"
 }
+```
 
-### 🤝 Contributing
+---
+
+## 🤝 Contributing
+
 1. Fork the repository
-2. Create your feature branch: git checkout -b feature/your-feature
-3. Commit your changes: git commit -m 'Add some feature'
-4. Push to the branch: git push origin feature/your-feature
+2. Create your feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
 5. Open a Pull Request
 
-### 👤 Author
-Tanuj — @Tanuj325
+---
 
-###📄 License
+## 👤 Author
+
+**Tanuj** — [@Tanuj325](https://github.com/Tanuj325)
+
+---
+
+## 📄 License
+
 This project is for academic and educational purposes.
+
+---
+
+<div align="center">
+  Made with ❤️ using React Native
+</div>
