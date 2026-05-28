@@ -1,0 +1,4 @@
+D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir

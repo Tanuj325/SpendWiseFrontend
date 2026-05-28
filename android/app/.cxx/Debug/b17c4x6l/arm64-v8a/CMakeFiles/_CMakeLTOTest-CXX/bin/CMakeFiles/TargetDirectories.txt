@@ -1,0 +1,4 @@
+C:/Mobile Development/SpendWise/android/app/.cxx/Debug/b17c4x6l/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+C:/Mobile Development/SpendWise/android/app/.cxx/Debug/b17c4x6l/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+C:/Mobile Development/SpendWise/android/app/.cxx/Debug/b17c4x6l/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+C:/Mobile Development/SpendWise/android/app/.cxx/Debug/b17c4x6l/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir
