@@ -33,7 +33,7 @@ Track expenses, manage budgets, and understand your spending habits — all in o
 
 ## 📱 About
 
-**SpendWise** is a cross-platform mobile application built with React Native that helps users take control of their personal finances. Log transactions, visualize spending trends with charts, set budgets, and stay on top of your financial goals — all offline-first using local storage.
+**SpendWise** is a cross-platform mobile application built with React Native that helps users take control of their personal finances. Log transactions, visualize spending trends with charts.
 
 This is the **frontend** repository. It connects to a Spring Boot backend for data persistence and user authentication.
 
@@ -44,11 +44,8 @@ This is the **frontend** repository. It connects to a Spring Boot backend for da
 - 📊 **Expense Charts** — Beautiful bar, line, and pie charts powered by `react-native-gifted-charts`
 - 🗓️ **Date Filtering** — Filter transactions by date range using a native date picker
 - 🗂️ **Category Management** — Organize transactions by custom categories
-- 🖼️ **Receipt Capture** — Attach images to transactions via the device camera or gallery
 - 💾 **Offline Storage** — AsyncStorage-backed local data persistence
 - 🧭 **Smooth Navigation** — Bottom tabs + drawer + stack navigation via React Navigation v7
-- 🌗 **Dark Mode Support** — Auto-detects system color scheme
-- ⚡ **Fast Refresh** — Instant hot-reload during development
 - 🎨 **Gradient UI** — Linear gradients for polished, modern aesthetics
 
 ---
