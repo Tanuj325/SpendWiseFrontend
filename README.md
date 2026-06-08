@@ -1,97 +1,190 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<div align="center">
 
-# Getting Started
+# 💸 SpendWise
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+### A Smart Personal Finance Tracker — Built with React Native
 
-## Step 1: Start Metro
+Track expenses, manage budgets, and understand your spending habits — all in one beautifully designed mobile app.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+[
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+![React Native](https://img.shields.io/badge/React%20Native-0.83.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 
-```sh
-# Using npm
-npm start
+](https://reactnative.dev/)
+[
 
-# OR using Yarn
-yarn start
+![JavaScript](https://img.shields.io/badge/JavaScript-JSX-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[
+
+![Node](https://img.shields.io/badge/Node.js-%3E%3D20-339933?style=for-the-badge&logo=node.js&logoColor=white)
+
+](https://nodejs.org/)
+[
+
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey?style=for-the-badge&logo=android)
+
+](https://reactnative.dev/)
+
+</div>
+
+---
+
+## 📱 About
+
+**SpendWise** is a cross-platform mobile application built with React Native that helps users take control of their personal finances. Log transactions, visualize spending trends with charts.
+
+This is the **frontend** repository. It connects to a Spring Boot backend for data persistence and user authentication.
+
+---
+
+## ✨ Features
+
+- 📊 **Expense Charts** — Beautiful bar, line, and pie charts powered by `react-native-gifted-charts`
+- 🗓️ **Date Filtering** — Filter transactions by date range using a native date picker
+- 🗂️ **Category Management** — Organize transactions by custom categories
+- 💾 **Offline Storage** — AsyncStorage-backed local data persistence
+- 🧭 **Smooth Navigation** — Bottom tabs + drawer + stack navigation via React Navigation v7
+- 🎨 **Gradient UI** — Linear gradients for polished, modern aesthetics
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | React Native 0.83.1 |
+| Language | JavaScript (JSX) + TypeScript |
+| Navigation | React Navigation v7 (Stack, Bottom Tabs, Drawer) |
+| Charts | react-native-gifted-charts |
+| Storage | @react-native-async-storage/async-storage |
+| Date Handling | dayjs + react-native-date-picker |
+| Animations | react-native-reanimated v4 + react-native-worklets |
+| Image Picker | react-native-image-picker |
+| Gradients | react-native-linear-gradient |
+| Gestures | react-native-gesture-handler |
+| SVG | react-native-svg |
+| Linting | ESLint + Prettier |
+| Testing | Jest |
+
+---
+
+## 📁 Project Structure
+
+```
+SpendWiseFrontend/
+├── android/              # Android native project
+├── ios/                  # iOS native project
+├── src/
+│   ├── navigation/       # AppNavigator & route configuration
+│   ├── screens/          # All app screens
+│   ├── components/       # Reusable UI components
+│   └── ...
+├── __tests__/            # Jest test files
+├── App.jsx               # Root component
+├── index.js              # Entry point
+├── package.json
+├── tsconfig.json
+└── babel.config.js
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Getting Started
 
-### Android
+### Prerequisites
 
-```sh
-# Using npm
-npm run android
+- **Node.js** >= 20
+- **React Native CLI** environment set up → [Official Guide](https://reactnative.dev/docs/set-up-your-environment)
+- **Android Studio** (for Android) or **Xcode** (for iOS, macOS only)
 
-# OR using Yarn
-yarn android
-```
+### Installation
 
-### iOS
+```bash
+# 1. Clone the repository
+git clone https://github.com/Tanuj325/SpendWiseFrontend.git
+cd SpendWiseFrontend
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+# 2. Install dependencies
+npm install
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
+# 3. (iOS only) Install CocoaPods
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
 bundle exec pod install
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Running the App
 
-```sh
-# Using npm
+```bash
+# Step 1 — Start Metro bundler
+npm start
+
+# Step 2 — Run on Android
+npm run android
+
+# Step 3 — Run on iOS
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+> If the simulator doesn't launch automatically, open Android Studio / Xcode and start an emulator manually.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## 🔍 Linting & Formatting
 
-Now that you have successfully run the app, let's make changes!
+```bash
+# Lint
+npm run lint
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+# Format (Prettier)
+npx prettier --write "src/**/*.{js,jsx,ts,tsx}"
+```
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## 🔗 Backend
 
-## Congratulations! :tada:
+This app is paired with a **Spring Boot backend**. Make sure the backend server is running and update the base URL in the API config before running the app.
 
-You've successfully run and modified your React Native App. :partying_face:
+> Backend repo: [SpendWiseBackend](https://github.com/Tanuj325/SpendWiseBackend)
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 📦 Key Dependencies
 
-# Troubleshooting
+```json
+{
+  "@react-navigation/bottom-tabs": "^7.10.1",
+  "@react-navigation/drawer": "^7.7.13",
+  "@react-navigation/native-stack": "^7.16.0",
+  "react-native-gifted-charts": "^1.4.77",
+  "react-native-reanimated": "^4.2.1",
+  "react-native-image-picker": "^7.1.2",
+  "react-native-linear-gradient": "^2.8.3",
+  "@react-native-async-storage/async-storage": "^2.2.0",
+  "dayjs": "^1.11.19"
+}
+```
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## 🤝 Contributing
 
-To learn more about React Native, take a look at the following resources:
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+
+## 👤 Author
+
+**Tanuj** — [@Tanuj325](https://github.com/Tanuj325)
+
+---
+
+## 📄 License
+
+This project is for academic and educational purposes.
