@@ -14,6 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import CategoryCard from '../../components/CategoryCard'
 import TransactionCard from '../../components/TransactionCard'
+import EditExpenseModal from '../../modal/EditExpenseModal'
 
 export default function HomeScreen() {
 
@@ -22,6 +23,13 @@ export default function HomeScreen() {
     const [transactions, setTransactions] = useState([])
     const [categories, setCategories] = useState([])
     const [loading, setLoading] = useState(true)
+
+    const [editModalVisible, setEditModalVisible] = useState(false);
+    const [selectedExpense, setSelectedExpense] = useState(null);
+
+    const [page, setPage] = useState(0);
+    const [hasMore, setHasMore] = useState(true);
+    const [loadingMore, setLoadingMore] = useState(false);
 
     // =========================
     // API URL
@@ -53,16 +61,23 @@ export default function HomeScreen() {
 
             const userId = user.id
 
-            const [totalAmount, recentTransactions, categoryData] =
+            const [totalAmount, categoryData] =
                 await Promise.all([
                     handleSetAmount(userId),
-                    handleRecentTransactions(userId),
                     handleCategoryData(userId)
-                ])
+                ]);
 
-            setAmount(totalAmount || 0)
-            setTransactions(recentTransactions || [])
-            setCategories(categoryData || [])
+            setAmount(totalAmount || 0);
+            setCategories(categoryData || []);
+
+            setPage(0);
+            setHasMore(true);
+
+            await handleRecentTransactions(
+                userId,
+                0,
+                true
+            );
 
         } catch (error) {
 
@@ -73,6 +88,37 @@ export default function HomeScreen() {
             setLoading(false)
         }
     }
+
+    const loadMoreExpenses = async () => {
+
+        if (loadingMore || !hasMore) {
+            return;
+        }
+
+        try {
+
+            setLoadingMore(true);
+
+            const savedUser =
+                await AsyncStorage.getItem('userData');
+
+            const user = JSON.parse(savedUser);
+
+            const nextPage = page + 1;
+
+            await handleRecentTransactions(
+                user.id,
+                nextPage,
+                false
+            );
+
+            setPage(nextPage);
+
+        } catch (error) {
+
+            console.log(error);
+        }
+    };
 
     // =========================
     // CATEGORY DATA
@@ -122,14 +168,18 @@ export default function HomeScreen() {
     // =========================
     // RECENT TRANSACTIONS
     // =========================
-    const handleRecentTransactions = async (userId) => {
+    const handleRecentTransactions = async (
+        userId,
+        pageNumber = 0,
+        reset = false
+    ) => {
 
         try {
 
-            const token = await AsyncStorage.getItem('token')
+            const token = await AsyncStorage.getItem('token');
 
             const response = await fetch(
-                `${BASE_URL}/expenses/${userId}`,
+                `${BASE_URL}/expenses/${userId}/limit?page=${pageNumber}&size=20`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -137,30 +187,83 @@ export default function HomeScreen() {
                 }
             )
 
-            const data = await response.json()
+            const data = await response.json();
 
-            if (!Array.isArray(data)) return []
+            const expenses = data.content || [];
 
-            const currentMonth = dayjs().month()
-            const currentYear = dayjs().year()
+            const currentMonth = dayjs().month();
+            const currentYear = dayjs().year();
 
-            return data
+            const filteredExpenses = expenses
                 .filter(item => {
-                    const d = dayjs(item.date)
-                    return d.month() === currentMonth &&
+                    const d = dayjs(item.date);
+                    return (
+                        d.month() === currentMonth &&
                         d.year() === currentYear
-                })
-                .sort((a, b) =>
-                    new Date(b.date) - new Date(a.date)
-                )
+                    );
+                });
+            const sortedExpenses = filteredExpenses.sort(
+                (a, b) => new Date(b.date) - new Date(a.date)
+            );
+
+            if (reset) {
+                setTransactions(sortedExpenses);
+            } else {
+                setTransactions(prev => [
+                    ...prev,
+                    ...sortedExpenses
+                ]);
+            }
+
+            setHasMore(!data.last);
 
         } catch (error) {
 
-            console.log(error)
+            console.log(error);
 
-            return []
+        } finally {
+
+            setLoadingMore(false);
         }
-    }
+    };
+
+    const handleDelete = async (expenseId) => {
+        try {
+
+            const token = await AsyncStorage.getItem('token');
+            const savedUser = await AsyncStorage.getItem('userData');
+            const user = JSON.parse(savedUser);
+
+            const response = await fetch(
+                `${BASE_URL}/expenses/${user.id}/${expenseId}`,
+                {
+                    method: 'DELETE',
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            console.log(response.status);
+
+            if (response.ok) {
+
+                setTransactions(prev =>
+                    prev.filter(item => item.id !== expenseId)
+                );
+
+                loadData();
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+    };
+
+    const handleEdit = (expense) => {
+        setSelectedExpense(expense);
+        setEditModalVisible(true);
+    };
 
     // =========================
     // TOTAL AMOUNT
@@ -282,9 +385,7 @@ export default function HomeScreen() {
 
                 <FlatList
                     data={transactions}
-                    keyExtractor={(item, index) =>
-                        index.toString()
-                    }
+                    keyExtractor={(item) => item.id}
                     renderItem={({ item }) => (
 
                         <TransactionCard
@@ -293,16 +394,33 @@ export default function HomeScreen() {
                             date={dayjs(item.date)
                                 .format('DD MMM YYYY')}
                             category={item.category}
+                            onEdit={() => handleEdit(item)}
+                            onDelete={() => handleDelete(item.id)}
                         />
                     )}
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={{
                         paddingBottom: 100
                     }}
+                    onEndReached={loadMoreExpenses}
+                    onEndReachedThreshold={0.5}
+                    ListFooterComponent={
+                        loadingMore ? (
+                            <ActivityIndicator
+                                size="small"
+                                color="#22D3EE"
+                            />
+                        ) : null
+                    }
                 />
 
             </View>
-
+            <EditExpenseModal
+                visible={editModalVisible}
+                expense={selectedExpense}
+                onClose={() => setEditModalVisible(false)}
+                onUpdated={loadData}
+            />
         </View>
     )
 }
