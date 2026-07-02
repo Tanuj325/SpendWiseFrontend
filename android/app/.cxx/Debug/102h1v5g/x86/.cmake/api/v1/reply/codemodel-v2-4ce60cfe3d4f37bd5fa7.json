@@ -222,7 +222,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appmodules::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appmodules-Debug-aa49e704a48b74afc715.json",
+					"jsonFile" : "target-appmodules-Debug-b4be66988f7c5f38977b.json",
 					"name" : "appmodules",
 					"projectIndex" : 0
 				},
@@ -257,7 +257,7 @@
 				{
 					"directoryIndex" : 4,
 					"id" : "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec",
-					"jsonFile" : "target-react_codegen_rngesturehandler_codegen-Debug-aec587b8c7141653121e.json",
+					"jsonFile" : "target-react_codegen_rngesturehandler_codegen-Debug-a3b55dea12978091bbfd.json",
 					"name" : "react_codegen_rngesturehandler_codegen",
 					"projectIndex" : 0
 				},
@@ -271,14 +271,14 @@
 				{
 					"directoryIndex" : 8,
 					"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad",
-					"jsonFile" : "target-react_codegen_rnscreens-Debug-d77ec1e956fa00b51f1c.json",
+					"jsonFile" : "target-react_codegen_rnscreens-Debug-e4a2308a16aa90d4ee91.json",
 					"name" : "react_codegen_rnscreens",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 9,
 					"id" : "react_codegen_rnsvg::@4f40eb209d0c0b4a3b65",
-					"jsonFile" : "target-react_codegen_rnsvg-Debug-3b23b0c86719ec0e41c3.json",
+					"jsonFile" : "target-react_codegen_rnsvg-Debug-3b214434f8cc4ccd7b82.json",
 					"name" : "react_codegen_rnsvg",
 					"projectIndex" : 0
 				},
@@ -292,7 +292,7 @@
 				{
 					"directoryIndex" : 7,
 					"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a",
-					"jsonFile" : "target-react_codegen_safeareacontext-Debug-fa4a4b578794125ba7e9.json",
+					"jsonFile" : "target-react_codegen_safeareacontext-Debug-a32a7a1c0f76aa78ff04.json",
 					"name" : "react_codegen_safeareacontext",
 					"projectIndex" : 0
 				}
@@ -302,7 +302,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/arm64-v8a",
+		"build" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86",
 		"source" : "D:/Tanuj/Mobile Development/SpendWise/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup"
 	},
 	"version" : 

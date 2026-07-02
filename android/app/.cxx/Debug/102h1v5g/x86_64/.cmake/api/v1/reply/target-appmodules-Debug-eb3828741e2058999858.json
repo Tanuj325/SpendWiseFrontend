@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/build/intermediates/cxx/Debug/102h1v5g/obj/x86/libappmodules.so"
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/build/intermediates/cxx/Debug/102h1v5g/obj/x86_64/libappmodules.so"
 		}
 	],
 	"backtrace" : 3,
@@ -348,11 +348,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a"
-		},
-		{
-			"backtrace" : 4,
-			"id" : "react_codegen_RNImagePickerSpec::@f66ee9a2efecfb28bee4"
+			"id" : "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec"
 		},
 		{
 			"backtrace" : 4,
@@ -360,7 +356,15 @@
 		},
 		{
 			"backtrace" : 4,
-			"id" : "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec"
+			"id" : "react_codegen_RNImagePickerSpec::@f66ee9a2efecfb28bee4"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "react_codegen_rnworklets::@68f58d84d4754f193387"
 		},
 		{
 			"backtrace" : 4,
@@ -369,10 +373,6 @@
 		{
 			"backtrace" : 4,
 			"id" : "react_codegen_rnsvg::@4f40eb209d0c0b4a3b65"
-		},
-		{
-			"backtrace" : 4,
-			"id" : "react_codegen_rnworklets::@68f58d84d4754f193387"
 		}
 	],
 	"id" : "appmodules::@6890427a1f51a3e7e1df",
@@ -381,37 +381,37 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments",
+				"fragment" : "-Wl,-z,max-page-size=16384 -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "\"D:\\Tanuj\\Mobile Development\\SpendWise\\android\\app\\build\\intermediates\\cxx\\Debug\\102h1v5g\\obj\\x86\\libreact_codegen_safeareacontext.so\"",
+				"fragment" : "\"D:\\Tanuj\\Mobile Development\\SpendWise\\android\\app\\build\\intermediates\\cxx\\Debug\\102h1v5g\\obj\\x86_64\\libreact_codegen_safeareacontext.so\"",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "\"D:\\Tanuj\\Mobile Development\\SpendWise\\android\\app\\build\\intermediates\\cxx\\Debug\\102h1v5g\\obj\\x86\\libreact_codegen_rnscreens.so\"",
+				"fragment" : "\"D:\\Tanuj\\Mobile Development\\SpendWise\\android\\app\\build\\intermediates\\cxx\\Debug\\102h1v5g\\obj\\x86_64\\libreact_codegen_rnscreens.so\"",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "\"D:\\Tanuj\\Mobile Development\\SpendWise\\android\\app\\build\\intermediates\\cxx\\Debug\\102h1v5g\\obj\\x86\\libreact_codegen_rnsvg.so\"",
+				"fragment" : "\"D:\\Tanuj\\Mobile Development\\SpendWise\\android\\app\\build\\intermediates\\cxx\\Debug\\102h1v5g\\obj\\x86_64\\libreact_codegen_rnsvg.so\"",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "C:\\Users\\tanuj\\.gradle\\caches\\8.13\\transforms\\1f5d918f346dcfff979dd68610f7be1e\\transformed\\fbjni-0.7.0\\prefab\\modules\\fbjni\\libs\\android.x86\\libfbjni.so",
+				"fragment" : "C:\\Users\\tanuj\\.gradle\\caches\\8.13\\transforms\\1f5d918f346dcfff979dd68610f7be1e\\transformed\\fbjni-0.7.0\\prefab\\modules\\fbjni\\libs\\android.x86_64\\libfbjni.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "C:\\Users\\tanuj\\.gradle\\caches\\8.13\\transforms\\2927a40f16035d065cdd391e235f1c11\\transformed\\react-android-0.83.1-debug\\prefab\\modules\\jsi\\libs\\android.x86\\libjsi.so",
+				"fragment" : "C:\\Users\\tanuj\\.gradle\\caches\\8.13\\transforms\\2927a40f16035d065cdd391e235f1c11\\transformed\\react-android-0.83.1-debug\\prefab\\modules\\jsi\\libs\\android.x86_64\\libjsi.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "C:\\Users\\tanuj\\.gradle\\caches\\8.13\\transforms\\2927a40f16035d065cdd391e235f1c11\\transformed\\react-android-0.83.1-debug\\prefab\\modules\\reactnative\\libs\\android.x86\\libreactnative.so",
+				"fragment" : "C:\\Users\\tanuj\\.gradle\\caches\\8.13\\transforms\\2927a40f16035d065cdd391e235f1c11\\transformed\\react-android-0.83.1-debug\\prefab\\modules\\reactnative\\libs\\android.x86_64\\libreactnative.so",
 				"role" : "libraries"
 			},
 			{
@@ -508,253 +508,253 @@
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/RNBootSplashSpec-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/RNBootSplashSpec-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/RNDatePickerSpecs-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/RNDatePickerSpecs-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNDatePickerSpecs_autolinked_build/CMakeFiles/react_codegen_RNDatePickerSpecs.dir/react/renderer/components/RNDatePickerSpecs/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/bac033cd950586cef66695376748dd33/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/rngesturehandler_codegen-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/rngesturehandler_codegen-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/RNImagePickerSpec-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/RNImagePickerSpec-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/RNImagePickerSpec_autolinked_build/CMakeFiles/react_codegen_RNImagePickerSpec.dir/react/renderer/components/RNImagePickerSpec/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/rnreanimated-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/rnreanimated-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/ComponentDescriptors.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/ComponentDescriptors.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/EventEmitters.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/EventEmitters.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/Props.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/Props.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/ShadowNodes.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/ShadowNodes.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/States.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/react/renderer/components/rnworklets/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/rnworklets-generated.cpp.o",
+			"path" : "D:/Tanuj/Mobile Development/SpendWise/android/app/.cxx/Debug/102h1v5g/x86_64/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir/rnworklets-generated.cpp.o",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -126,11 +126,12 @@ export default function HomeScreen() {
     const handleCategoryData = async (userId) => {
 
         try {
-
+            const month = dayjs().month()
+            const year = dayjs().year()
             const token = await AsyncStorage.getItem('token')
 
             const response = await fetch(
-                `${BASE_URL}/expenses/category/${userId}`,
+                `${BASE_URL}/expenses/report/${userId}?month=${month}&year=${year}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -154,8 +155,8 @@ export default function HomeScreen() {
             return categoriesWithIcons.map(item => ({
                 name: item.category,
                 icon: item.icon,
-                amount: data[item.category] || 0
-            }))
+                amount: data.categoryWise?.[item.category] || 0
+            }));
 
         } catch (error) {
 
@@ -271,11 +272,13 @@ export default function HomeScreen() {
     const handleSetAmount = async (userId) => {
 
         try {
+            const month = dayjs().month()
+            const year = dayjs().year()
 
             const token = await AsyncStorage.getItem('token')
 
             const response = await fetch(
-                `${BASE_URL}/expenses/${userId}`,
+                `${BASE_URL}/expenses/report/${userId}?month=${month}&year=${year}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -285,18 +288,7 @@ export default function HomeScreen() {
 
             const data = await response.json()
 
-            if (!Array.isArray(data)) return 0
-
-            const currentMonth = dayjs().month()
-            const currentYear = dayjs().year()
-
-            return data
-                .filter(e => {
-                    const d = dayjs(e.date)
-                    return d.month() === currentMonth &&
-                        d.year() === currentYear
-                })
-                .reduce((acc, e) => acc + e.amount, 0)
+            return data?.total || 0;
 
         } catch (error) {
 
@@ -340,7 +332,7 @@ export default function HomeScreen() {
                     </Text>
 
                     <Text style={styles.totalAmount}>
-                        ₹ {amount}
+                        ₹ {amount.toLocaleString()}
                     </Text>
 
                     <Text style={styles.subText}>
@@ -368,7 +360,7 @@ export default function HomeScreen() {
                             key={index}
                             icon={item.icon}
                             category={item.name}
-                            amount={item.amount}
+                            amount={item.amount.toLocaleString()}
                         />
                     ))}
 
@@ -390,7 +382,7 @@ export default function HomeScreen() {
 
                         <TransactionCard
                             title={item.description}
-                            amount={item.amount}
+                            amount={item.amount.toLocaleString()}
                             date={dayjs(item.date)
                                 .format('DD MMM YYYY')}
                             category={item.category}
