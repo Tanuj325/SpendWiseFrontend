@@ -13,7 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function StatsScreen() {
 
-  const [currentYear, setCurrentYear] = useState('')
+  
   const [pieData, setPieData] = useState([])
   const [dayData, setDayData] = useState([])
   const [monthlyData, setMonthlyData] = useState([])
@@ -23,7 +23,6 @@ export default function StatsScreen() {
   const BASE_URL = 'https://spendwisebackend-yvnj.onrender.com'
 
   useEffect(() => {
-    setCurrentYear(dayjs().format('YYYY'))
     loadStats()
   }, [])
 
@@ -184,7 +183,7 @@ export default function StatsScreen() {
       <View style={styles.totalCard}>
 
         <Text style={styles.totalTitle}>
-          Total Expense of Year {currentYear}
+          Your Total Expense
         </Text>
 
         <Text style={styles.totalAmount}>
